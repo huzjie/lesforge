@@ -1,0 +1,40 @@
+# lesforge default config (small fast proxy; declared scale = 35B/3B)
+vision:
+  patch_size: 8
+  img_size: 32
+  dim: 32
+  depth: 2
+  heads: 4
+
+moe:
+  n_experts: 16
+  top_k: 2
+  hidden: 64
+  dim: 32
+  n_layers: 6
+  activation: swiglu
+  total_params_b: 35.0
+  active_params_b: 3.0
+
+schedule:
+  lookahead: 1
+  resident_experts: 8
+  offload_path: ".lesforge_offload"
+  memory_budget_mb: 3000
+  prefetch_depth: 2
+  quant_bits: 4
+  eviction: lru
+
+model:
+  name: mock
+  dim: 32
+  skill: 0.5
+  temperature: 0.7
+  max_tokens: 16
+  vocab_size: 256
+
+serving:
+  host: "127.0.0.1"
+  port: 8000
+
+seed: 42

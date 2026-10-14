@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: lesforge
+  labels:
+    app: lesforge
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: lesforge
+  template:
+    metadata:
+      labels:
+        app: lesforge
+    spec:
+      containers:
+        - name: lesforge
+          image: lesforge:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
+          env:
+            - name: LESFORGE_CONFIG
+              value: /app/configs/mobile.yaml
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "1"

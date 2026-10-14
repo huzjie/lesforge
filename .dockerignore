@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.git/
+.lesforge_offload/
+.push_cache.json
+tests/
+_build/
+data/

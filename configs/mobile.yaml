@@ -1,0 +1,30 @@
+# phone-class budget: ~3 GB memory, INT4 experts (declared 35B/3B)
+vision:
+  dim: 32
+  depth: 2
+  heads: 4
+  img_size: 32
+  patch_size: 8
+
+moe:
+  n_experts: 16
+  top_k: 2
+  hidden: 64
+  dim: 32
+  n_layers: 6
+  total_params_b: 35.0
+  active_params_b: 3.0
+
+schedule:
+  lookahead: 1
+  resident_experts: 8
+  offload_path: ".lesforge_offload"
+  memory_budget_mb: 3000
+  prefetch_depth: 2
+  quant_bits: 4
+  eviction: lru
+
+model:
+  name: mock
+  dim: 32
+  skill: 0.5

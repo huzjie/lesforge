@@ -1,0 +1,23 @@
+replicaCount: 1
+
+image:
+  repository: lesforge
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 8000
+
+config: |
+  model:
+    name: mock
+    skill: 0.5
+
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "250m"
+  limits:
+    memory: "512Mi"
+    cpu: "1"

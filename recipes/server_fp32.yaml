@@ -1,0 +1,6 @@
+# 服务器 fp32 配方（全常驻）
+schedule:
+  quant_bits: 0
+  resident_experts: 64
+  prefetch_depth: 4
+  memory_budget_mb: 48000

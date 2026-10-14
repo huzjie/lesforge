@@ -1,0 +1,5 @@
+# 前瞻深度 2（激进命中优先）
+schedule:
+  lookahead: 2
+  prefetch_depth: 6
+  resident_experts: 16

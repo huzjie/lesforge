@@ -1,0 +1,6 @@
+# 极省内存
+schedule:
+  quant_bits: 4
+  resident_experts: 4
+  prefetch_depth: 2
+  memory_budget_mb: 512

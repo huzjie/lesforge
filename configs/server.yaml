@@ -1,0 +1,26 @@
+# server-class budget: everything resident, no offload needed
+vision:
+  dim: 64
+  depth: 4
+  heads: 8
+  img_size: 64
+  patch_size: 8
+
+moe:
+  n_experts: 32
+  top_k: 4
+  hidden: 128
+  dim: 64
+  n_layers: 8
+
+schedule:
+  lookahead: 2
+  resident_experts: 64
+  memory_budget_mb: 48000
+  prefetch_depth: 4
+  quant_bits: 0
+  eviction: lfu
+
+model:
+  dim: 64
+  skill: 0.5

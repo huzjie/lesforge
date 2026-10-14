@@ -1,0 +1,6 @@
+apiVersion: v2
+name: lesforge
+description: Lookahead Expert Scheduling for on-device MoE VLMs
+type: application
+version: 0.1.0
+appVersion: "0.1.0"

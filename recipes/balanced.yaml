@@ -1,0 +1,7 @@
+# 均衡配置（默认）
+schedule:
+  lookahead: 1
+  resident_experts: 8
+  prefetch_depth: 2
+  quant_bits: 4
+  eviction: lru

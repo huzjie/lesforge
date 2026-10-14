@@ -1,0 +1,10 @@
+services:
+  lesforge:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - LESFORGE_CONFIG=/app/configs/mobile.yaml
+    volumes:
+      - ./configs:/app/configs:ro
+    restart: unless-stopped

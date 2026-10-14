@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lesforge"
+version = "0.1.0"
+description = "Lookahead Expert Scheduling (LES) for on-device MoE vision-language models (MiniCPM-V 4.7 direction, zero-dependency reference)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Apache-2.0" }
+authors = [{ name = "lesforge contributors" }]
+keywords = ["moe", "mixture-of-experts", "vision-language", "on-device", "expert-offload", "lookahead-scheduling", "prefetch", "edge-ai", "quantization"]
+
+[project.scripts]
+lesforge = "lesforge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["lesforge*"]

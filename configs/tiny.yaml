@@ -1,0 +1,22 @@
+# smallest smoke-test config (instant to run)
+vision:
+  dim: 32
+  depth: 1
+  heads: 2
+  img_size: 16
+  patch_size: 8
+
+moe:
+  n_experts: 8
+  top_k: 2
+  hidden: 32
+  dim: 32
+  n_layers: 3
+
+schedule:
+  resident_experts: 4
+  memory_budget_mb: 256
+
+model:
+  dim: 32
+  skill: 0.5

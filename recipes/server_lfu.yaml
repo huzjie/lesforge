@@ -1,0 +1,6 @@
+# 服务器 LFU 驱逐
+schedule:
+  eviction: lfu
+  resident_experts: 64
+  prefetch_depth: 4
+  quant_bits: 0

@@ -1,0 +1,5 @@
+# 激进前瞻（lookahead=2，命中优先）
+schedule:
+  lookahead: 2
+  prefetch_depth: 4
+  resident_experts: 16

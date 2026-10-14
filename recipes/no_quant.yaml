@@ -1,0 +1,5 @@
+# 无量化（精度优先）
+schedule:
+  quant_bits: 0
+  resident_experts: 8
+  prefetch_depth: 2

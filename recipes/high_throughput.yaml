@@ -1,0 +1,5 @@
+# 高吞吐（大预取深度）
+schedule:
+  prefetch_depth: 8
+  resident_experts: 16
+  eviction: lru

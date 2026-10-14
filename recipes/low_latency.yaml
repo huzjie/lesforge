@@ -1,0 +1,5 @@
+# 低延迟优先（加大预取深度隐藏 I/O）
+schedule:
+  prefetch_depth: 6
+  resident_experts: 12
+  eviction: lru

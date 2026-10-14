@@ -1,0 +1,5 @@
+# int8 量化（存储折中）
+schedule:
+  quant_bits: 8
+  resident_experts: 12
+  prefetch_depth: 3

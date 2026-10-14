@@ -1,0 +1,6 @@
+# 手机端 INT4 配方
+schedule:
+  quant_bits: 4
+  resident_experts: 8
+  prefetch_depth: 2
+  memory_budget_mb: 3000

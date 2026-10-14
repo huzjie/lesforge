@@ -1,0 +1,5 @@
+# 内存极紧（更强量化 + 更少常驻）
+schedule:
+  quant_bits: 4
+  resident_experts: 4
+  memory_budget_mb: 1024
